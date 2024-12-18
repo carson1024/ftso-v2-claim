@@ -99,7 +99,7 @@ function App() {
   }
 
   useEffect(() => {
-    if (!rewardOwner || rewardOwner.length != 42 || !recipient || recipient.length != 42) {
+    if (!rewardOwner || rewardOwner.length != 42 || (recipient && recipient.length != 42)) {
       setClaimableAmount(0);
       return;
     }
