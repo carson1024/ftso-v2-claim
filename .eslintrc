@@ -1,0 +1,52 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "react-app",
+		"plugin:react/recommended",
+		"plugin:jsx-a11y/recommended"
+  ],
+  "plugins": ["flowtype"],
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "node": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 7,
+    "sourceType": "module",
+    "jsx": true,
+    "modules": true
+  },
+	"globals": {
+		"mount": "readonly",
+		"shallow": "readonly"
+	},
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "rules": {
+    "indent": "off",
+    "no-undef": "error",
+    "no-console": "off",
+    "no-unused-vars": "off",
+    "curly": "warn",
+    "eqeqeq": ["warn", "smart"],
+    "brace-style": "off",
+    "arrow-body-style": "off",
+    "new-cap": "off",
+    "object-shorthand": ["warn", "properties"],
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off",
+    "react/no-unescaped-entities": "off",
+    "react/jsx-key": "off",
+    "comma-dangle": ["warn", {
+      "arrays": "only-multiline",
+      "objects": "only-multiline",
+      "imports": "only-multiline",
+      "exports": "only-multiline",
+      "functions": "only-multiline"
+    }]
+  }
+}
