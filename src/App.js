@@ -99,9 +99,12 @@ function App() {
   }
 
   useEffect(() => {
-    if (!rewardOwner || rewardOwner.length != 42) return;
+    if (!rewardOwner || rewardOwner.length != 42 || !recipient || recipient.length != 42) {
+      setClaimableAmount(0);
+      return;
+    }
     claim(true);
-  }, [rewardOwner]);
+  }, [rewardOwner, recipient]);
 
   const formatEther = (num) => {
     return (Number(num) / 10 ** 18).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
